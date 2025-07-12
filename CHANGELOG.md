@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v14
+- forked from https://github.com/mipmip/gnome-shell-extensions-highlight-focus
+- use square lower corners for border
+- show semi-transparent overlay in front of all but the active window
+
 ## v13
 - support Gnome 47
 

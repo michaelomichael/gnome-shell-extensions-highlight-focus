@@ -1,5 +1,7 @@
 /*********************************************************************
- * Highlight Focus is Copyright (C) 2021-2024 Pim Snel
+ * Highlight Focus is Copyright (C) 2025 michoelomichael
+ *
+ * Based on original work by Pim Snel
  *
  * Highlight Focus is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as
@@ -160,6 +162,15 @@ export default class HightlightCurrentWindowPreferences extends ExtensionPrefere
       1,
       "border-radius",
     );
+    this.create_spin_row(
+      "Background Opacity",
+      "Set background opacity (%)",
+      0,
+      80,
+      5,
+      "background-opacity",
+    );
+
     const row = new Adw.SwitchRow({
       title: _("Disable Hiding"),
       subtitle: _("Disable hiding border on focused window."),
@@ -172,6 +183,7 @@ export default class HightlightCurrentWindowPreferences extends ExtensionPrefere
       "active",
       Gio.SettingsBindFlags.DEFAULT,
     );
+
     this.create_spin_row(
       "Hide Delay",
       "Delay in microseconds after when the border will be hidden",

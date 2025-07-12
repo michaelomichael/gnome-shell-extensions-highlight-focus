@@ -7,7 +7,12 @@ if [ "$UID" = "0" ]; then
     exit 101
 fi
 
-NAME=highlight-focus\@pimsnel.com
+NAME=highlight-focus\@michaelomichael.dev
+
+function clean {
+  echo "Cleaning..."
+  rm -f highlight-focus*.zip schemas/*
+}
 
 function pack-extension {
   echo "Packing extension..."
@@ -50,11 +55,13 @@ function usage() {
 
 case "$1" in
     "local-install" )
+        clean
         pack-extension
         gnome-extensions install --force $NAME.shell-extension.zip
         ;;
 
     "zip" )
+        clean
         pack-extension
         ;;
 

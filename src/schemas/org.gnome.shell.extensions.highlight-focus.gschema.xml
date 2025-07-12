@@ -22,10 +22,16 @@
     <key name="border-radius" type="i">
       <default>6</default>
       <summary>Border Radius</summary>
-      <description>Border Radius.</description>
+      <description>Border radius.</description>
     </key>
 
-    <key name="disable-hiding" type="b">
+    <key name="background-opacity" type="i">
+      <default>25</default>
+      <summary>Background Opacity</summary>
+      <description>Background opacity.</description>
+    </key>
+
+<key name="disable-hiding" type="b">
       <default>false</default>
       <summary>Disable border hiding</summary>
       <description>Always show border on focussed window.</description>
